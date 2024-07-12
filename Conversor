@@ -1,0 +1,44 @@
+package conversor;
+
+import java.util.Scanner;
+
+public class Conversor {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Bem-vindo ao conversor de unidades!");
+        System.out.println("Escolha uma opcao de conversao:");
+        System.out.println("1. Quilogramas para Libras");
+        System.out.println("2. Metros para Pes");
+        System.out.println("3. Celsius para Fahrenheit");
+        System.out.print("Digite o numero correspondente a sua escolha: ");
+
+        int escolha = scanner.nextInt();
+        double resultado;
+
+        switch (escolha) {
+            case 1:
+                System.out.print("Digite o valor em quilogramas: ");
+                double quilogramas = scanner.nextDouble();
+                resultado = quilogramas * 2.20462; 
+                System.out.println(quilogramas + " quilogramas equivalem a " + resultado + " libras.");
+                break;
+            case 2:
+                System.out.print("Digite o valor em metros: ");
+                double metros = scanner.nextDouble();
+                resultado = metros * 3.28084; 
+                System.out.println(metros + " metros equivalem a " + resultado + " pes.");
+                break;
+            case 3:
+                System.out.print("Digite a temperatura em Celsius: ");
+                double celsius = scanner.nextDouble();
+                resultado = celsius * 9 / 5 + 32; 
+                System.out.println(celsius + " graus Celsius equivalem a " + resultado + " graus Fahrenheit.");
+                break;
+            default:
+                System.out.println("Opção invalida!");
+        }
+
+    }
+}
